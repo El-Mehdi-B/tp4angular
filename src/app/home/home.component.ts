@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   nbItems: number = 4;
+  btnText: string = "Ajouter un élément.."
   constructor() { }
 
   ngOnInit() {
