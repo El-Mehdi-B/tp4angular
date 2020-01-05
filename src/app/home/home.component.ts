@@ -17,4 +17,11 @@ export class HomeComponent implements OnInit {
     this.nbItems = this.objectifs.length;
   }
 
+  ajoutItem(item: string) {
+    this.objectifs.push(item)
+    this.nbItems = this.objectifs.length
+    this.objectifText = ""
+      
+  }
+
 }
