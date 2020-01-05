@@ -19,7 +19,7 @@
         <input type="text" class="txt" name="item" placeholder="..." [(ngModel)]="objectifText" >
         <br>
         <p> {{objectifText}}</p>
-        <input type="submit" class="btn" [value]="btnText"   >
+        <input type="submit" class="btn" [value]="btnText"  (click)="ajoutItem(objectifText)"  >
         </form>
     </div>
   <div class="col">
