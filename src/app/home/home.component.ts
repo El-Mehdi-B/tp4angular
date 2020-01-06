@@ -20,6 +20,7 @@ import {trigger, style, transition, animate, keyframes, query, stagger} from '@a
 export class HomeComponent implements OnInit {
 
   nbItems: number = 4;
+  isHovered: boolean;
   btnText: string = "Ajouter un élément.."
   objectifText: string = ""
   objectifs = [];
@@ -32,8 +33,13 @@ export class HomeComponent implements OnInit {
   ajoutItem(item: string) {
     this.objectifs.push(item)
     this.nbItems = this.objectifs.length
-    this.objectifText = ""
-      
+    this.objectifText = ""   
+  }
+  toHover(){
+    this.isHovered=true;
+  }
+  toLeave(){
+    this.isHovered=false;
   }
 
 }

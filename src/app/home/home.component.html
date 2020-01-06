@@ -19,7 +19,7 @@
         <input type="text" class="txt" name="item" placeholder="..." [(ngModel)]="objectifText" >
         <br>
         <p> {{objectifText}}</p>
-        <input type="submit" class="btn" [value]="btnText"  (click)="ajoutItem(objectifText)"  >
+        <input type="submit" class="btn" [value]="btnText" (mouseover)="toHover()" (mouseleave)="toLeave()"  (click)="ajoutItem(objectifText)"  [ngClass]="{ redButton: objectifText.length==0, activatedButton:objectifText.length>0, readyToClickButton: (isHovered && objectifText.length>0 )}" >
         </form>
     </div>
   <div class="col">

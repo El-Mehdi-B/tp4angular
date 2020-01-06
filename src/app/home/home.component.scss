@@ -1,7 +1,24 @@
 .container {
     display: grid;
     grid-template-columns: 50% auto; 
+
 }
+.redButton{
+    background: #FF0000;
+    transition-duration: .5s;
+    transition-property: background;
+}
+.activatedButton{
+    background: #11BB11;
+    transition-duration: .5s;
+    transition-property: background;
+}
+.readyToClickButton{
+    background: #1111FF;
+    transition-duration: .5s;
+    transition-property: background;
+}
+
 
 .col {
     padding: .4em 1.3em;
@@ -9,9 +26,12 @@
 
 .color-dark {
     background: #2885C4;
+    transform : rotate(3deg);
 }
+
 .color-light {
-    background: #57B3F1,
+    background: #57B3F1;
+    transform : rotate(-3deg);
 }
 
 input.txt{
@@ -19,16 +39,18 @@ input.txt{
     padding: 1em;
     width: 80%;
     margin-bottom: 2em;
+
+
 }
 
 input.btn{
     border: 0;
     display: block;
     padding: 1em 3em;
-    background: rgba(230, 35, 10, 0.726);
     color: rgb(229, 239, 247); 
     margin-bottom: 1em;
     cursor: pointer;
+
 }
 
 .life-container{
@@ -37,4 +59,3 @@ input.btn{
     font-weight:bold;
     cursor:pointer;
 }
-
