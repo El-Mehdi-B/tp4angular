@@ -9,8 +9,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ConsultActiviteComponent implements OnInit {
 
-  inputMessage: string
-  idMessage: string
+  inputMessage: string;
+  idMessage: string;
   constructor(input: ActivatedRoute ) { 
     this.inputMessage= input.snapshot.params['message'];
     this.idMessage= input.snapshot.params['id'];

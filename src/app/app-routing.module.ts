@@ -23,13 +23,14 @@ const routes: Routes = [
   component: ConsultActiviteComponent
 },
 {
-  path :'consultAct/:message/:id',
-  component: ConsultActiviteComponent
-},
-{
   path :'consultAct/:message',
   component: ConsultActiviteComponent
 },
+{
+  path :'consultAct/:message/:id',
+  component: ConsultActiviteComponent
+},
+
 
 ];
 
