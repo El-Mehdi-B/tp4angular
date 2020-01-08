@@ -26,6 +26,10 @@ const routes: Routes = [
   path :'consultAct/:message/:id',
   component: ConsultActiviteComponent
 },
+{
+  path :'consultAct/:message',
+  component: ConsultActiviteComponent
+},
 
 ];
 
