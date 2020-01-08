@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {trigger, style, transition, animate, keyframes, query, stagger} from '@angular/animations'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -19,12 +20,14 @@ import {trigger, style, transition, animate, keyframes, query, stagger} from '@a
 
 export class HomeComponent implements OnInit {
 
+  private monRouteur: Router;
   nbItems: number = 4;
   isHovered: boolean;
   btnText: string = "Ajouter un élément.."
   objectifText: string = ""
   objectifs = [];
-  constructor() { }
+
+  constructor(router : Router) { this.monRouteur= router;}
 
   ngOnInit() {
     this.nbItems = this.objectifs.length;
@@ -34,6 +37,7 @@ export class HomeComponent implements OnInit {
     this.objectifs.push(item)
     this.nbItems = this.objectifs.length
     this.objectifText = ""   
+    setTimeout(()=>{this.monRouteur.navigate(['about'])},1500);
   }
   toHover(){
     this.isHovered=true;
